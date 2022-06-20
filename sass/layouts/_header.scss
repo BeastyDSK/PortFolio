@@ -1,0 +1,51 @@
+.header {
+    width: 100%;
+    padding: 0.5rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &_logo-text {
+        font-size: 3.2rem;
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+        background-image: linear-gradient(to right, $color-primary-text 50%, $color-secondary-text 50%);
+    }
+
+    & .navigation {
+        &_items {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        &_item {
+            margin-right: 1.6rem;
+        }
+
+        &_link:not([href^="mailto"]) {
+            position: relative;
+            transition: all 0.5s ease-in-out;
+
+            &:hover {
+                color: darken($color: $color-primary-text, $amount: 10);
+            }
+
+            &::after {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                content: "";
+                height: 2px;
+                width: 0;
+                background: $color-primary-text;
+                transition: all 0.5s ease-in-out;
+            }
+
+            &:hover::after {
+                width: 100%;
+            }
+        }
+    }
+}
