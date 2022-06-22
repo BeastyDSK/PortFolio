@@ -1,20 +1,65 @@
 .container {
     max-width: 110rem;
     margin: 0 auto;
+    position: relative;
+    z-index: inherit;
+}
+
+.heading-special {
+    display: inline-block;
+    transition: all 0.4s;
+    color: $color-secondary-text;
+}
+
+.heading-h2 {
+    width: 450px;
+    @include mediaQuery($desktop) {
+        width: 540px;
+    }
+    @include mediaQuery($tab) {
+        width: 380px;
+    }
+    @include mediaQuery($mobile) {
+        width: 290px;
+    }
+}
+
+.heading-special-tog {
+    transform: translateY(10rem);
+    opacity: 0;
 }
 
 .heading-primary {
     font-size: 6rem;
+    @include mediaQuery($mobile) {
+        font-size: 4.5rem;
+    }
 }
 
 .heading-secondary {
     font-size: 4rem;
+
+    @include mediaQuery($mobile) {
+        font-size: 3rem;
+    }
 }
 
 .heading-tertiary {
     font-size: 3.2rem;
     padding-left: 1rem;
+
     border-left: 3px solid $color-secondary-text;
+    animation: comeRight 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+    @include mediaQuery($mobile) {
+        font-size: 2.5rem;
+    }
+}
+
+.highlight,
+.highlight:link,
+.highlight:visited {
+    color: $color-secondary-text;
 }
 
 .section {
@@ -24,12 +69,25 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        position: relative;
+        z-index: inherit;
     }
 
     &-skills,
     &-about,
-    &-projects {
+    &-projects,
+    &-contact {
         padding: 5rem 10rem;
+        position: relative;
+        z-index: inherit;
+
+        @include mediaQuery($ipad) {
+            padding: 1rem 4rem;
+        }
+
+        @include mediaQuery($mobile) {
+            padding: 2rem;
+        }
     }
 
     &-about {
@@ -37,6 +95,11 @@
             padding: 0rem 4rem;
             font-size: 1.8rem;
             line-height: 1.6;
+
+            @include mediaQuery($mobile) {
+                padding: 0 2rem;
+                font-size: 2rem;
+            }
         }
     }
 }
@@ -48,15 +111,25 @@
         align-items: center;
         gap: 1.5rem;
         padding: 3rem;
+        animation: comeLeft 1s;
+
+        @include mediaQuery($mobile) {
+            grid-template-columns: repeat(2, 1fr);
+        }
     }
 
     &-item {
         font-size: 2rem;
-        position: relative;
         &::before {
             content: "\227D";
             color: $color-secondary-text;
             margin-right: 1rem;
         }
     }
+}
+
+.contact {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
 }

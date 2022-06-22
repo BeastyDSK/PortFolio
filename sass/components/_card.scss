@@ -4,6 +4,15 @@
     justify-content: center;
     align-items: center;
     gap: 4rem;
+
+    @include mediaQuery($tab) {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+    @include mediaQuery($mobile) {
+        grid-template-columns: 1fr;
+        row-gap: 2rem;
+    }
 }
 
 .card {
@@ -13,6 +22,7 @@
     justify-content: center;
     width: 100%;
     background: $color-primary-back-light;
+    animation: goUp 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0 0;
     &-title {
         font-size: 2.4rem;
         font-weight: 700;
@@ -22,10 +32,10 @@
     }
 
     &-description {
-        font-size: 1.3rem;
+        font-size: 1.5rem;
         padding-top: 2rem;
         padding-bottom: 2rem;
-        min-height: 150px;
+        min-height: 180px;
     }
 
     &-tech {
@@ -46,6 +56,32 @@
         justify-content: space-between;
         padding-top: 2rem;
     }
+
+    // Min width Media
+    @include mediaQuery($desktop) {
+        &-description {
+            min-height: 210px;
+        }
+    }
+    // Max width Media
+    @include mediaQuery($tab) {
+        &-description {
+            font-size: 1.8rem;
+            min-height: 150px;
+        }
+        &-tech-item {
+            font-size: 1.3rem;
+        }
+    }
+
+    @include mediaQuery($mobile) {
+        &-description {
+            font-size: 2rem;
+        }
+        &-tech-item {
+            font-size: 1.5rem;
+        }
+    }
 }
 
 .git-link,
@@ -54,5 +90,10 @@
     & svg {
         width: 3rem;
         height: 3rem;
+        transition: all 0.3s;
     }
+}
+
+a[class$="-link"]:hover svg {
+    filter: brightness(70%);
 }

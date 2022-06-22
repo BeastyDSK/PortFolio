@@ -11,13 +11,16 @@
         "css:compress": "sass static/css/style.prefix.css:static/css/style.min.css --style=compressed",
         "start:dev": "nodemon app.js -e *",
         "start": "node app.js",
-        "run-all": "npm-run-all css:compile css:prefix css:compress"
+        "minify:js": "terser static/js/main.js --compress --output static/js/main.min.js",
+        "run-all": "npm-run-all css:compile css:prefix css:compress minify:js"
     },
     "author": "",
     "license": "ISC",
     "dependencies": {
+        "compression": "^1.7.4",
         "dotenv": "^16.0.1",
         "express": "^4.18.1",
+        "helmet": "^5.1.0",
         "pug": "^3.0.2"
     },
     "devDependencies": {

@@ -1,4 +1,6 @@
 const path = require("path");
+const compression = require("compression");
+const helmet = require("helmet");
 
 require("dotenv").config({
     path: path.join(__dirname, "config.env"),
@@ -7,6 +9,16 @@ require("dotenv").config({
 const express = require("express");
 
 const app = express();
+
+app.enable("Trust proxy");
+app.use(helmet());
+
+app.use(
+    compression({
+        level: 9,
+        memLevel: 9,
+    })
+);
 
 // To Serve Static files like styles and JS
 app.use(express.static(path.join(__dirname, "static")));

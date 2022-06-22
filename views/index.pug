@@ -3,10 +3,10 @@ extends base
 block content
     main.container
         section.section-heading.u-margin-bottom-hg
-            h1.heading-primary Hi There, WELCOME
-            h2.heading-secondary.u-margin-bottom-hg I am 
+            h1.heading-primary Hi There, Welcome
+            h2.heading-secondary.u-margin-bottom-hg.heading-h2 I am 
                 span.heading-special Krishnaprasanth
-            a.special-btn(href="#skills") Let's Begin!   
+            a.special-btn(href="#skills" aria-label="Lets Begin!") Let's Begin!
        
         section.section-skills.u-margin-bottom-hg#skills
             h3.heading-tertiary.u-margin-bottom-md I am Skilled In 🐱‍👤
@@ -30,8 +30,12 @@ block content
             
         section.section-about.u-margin-bottom-hg#about-me
             h3.heading-tertiary.u-margin-bottom-md Who Am I ? 🤔
-            p.text.u-margin-bottom-sm Hi There! My name is krishnaprasanth. I am full stack developer. I create websites for fun. So it started. Here I am doing full stack web development. 
-            p.text.u-margin-bottom-sm I started my career in 2020. Currently I am working in Tata Consultancy Services (Java & Oracle SQL Developer). And also doing a Blog Application and a Web Text Editor project side-by-side (Personal). Wish me Luck 🙂.
+            p.text.u-margin-bottom-sm Hi There! My name is 
+                span.highlight Krishnaprasanth
+                span .I am a Full-stack Web developer. 
+            p.text.u-margin-bottom-sm I started my career in 2020. Currently I am working in
+                a(href="https://www.tcs.com" target="_blank" aria-label="Tata Consultancy Services Home page").highlight  Tata Consultancy Services
+                span (Java & Oracle SQL Developer). And also doing a Blog Application and a Web based Text Editor project side-by-side (Personal). Wish me Luck 🙂.
             p.text I am interested in Learning new stuff, Writing Stories, watching Anime, Cricket and Football.
 
         section.section-projects.u-margin-bottom-hg#projects
@@ -49,10 +53,10 @@ block content
                             li.card-tech-item HTML5
                             li.card-tech-item CSS3
                     .card-links 
-                        a.git-link(href="https://github.com/BeastyDSK/Python-News-App" target="_blank")
-                            svg(xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 48 48" width="48px" height="48px")
-                                path(fill="#FD7E14" d="M42.2,22.1L25.9,5.8C25.4,5.3,24.7,5,24,5c0,0,0,0,0,0c-0.7,0-1.4,0.3-1.9,0.8l-3.5,3.5l4.1,4.1c0.4-0.2,0.8-0.3,1.3-0.3c1.7,0,3,1.3,3,3c0,0.5-0.1,0.9-0.3,1.3l4,4c0.4-0.2,0.8-0.3,1.3-0.3c1.7,0,3,1.3,3,3s-1.3,3-3,3c-1.7,0-3-1.3-3-3c0-0.5,0.1-0.9,0.3-1.3l-4-4c-0.1,0-0.2,0.1-0.3,0.1v10.4c1.2,0.4,2,1.5,2,2.8c0,1.7-1.3,3-3,3s-3-1.3-3-3c0-1.3,0.8-2.4,2-2.8V18.8c-1.2-0.4-2-1.5-2-2.8c0-0.5,0.1-0.9,0.3-1.3l-4.1-4.1L5.8,22.1C5.3,22.6,5,23.3,5,24c0,0.7,0.3,1.4,0.8,1.9l16.3,16.3c0,0,0,0,0,0c0.5,0.5,1.2,0.8,1.9,0.8s1.4-0.3,1.9-0.8l16.3-16.3c0.5-0.5,0.8-1.2,0.8-1.9C43,23.3,42.7,22.6,42.2,22.1z")
-                        a.open-link(href="https://dsk-news-app.herokuapp.com" target='_blank')
+                        a.git-link(href="https://github.com/BeastyDSK/Python-News-App" target="_blank" aria-label="Python news app Github link")
+                            svg(fill="#FD7E14" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 48 48" width="48px" height="48px")
+                                path(d="M42.2,22.1L25.9,5.8C25.4,5.3,24.7,5,24,5c0,0,0,0,0,0c-0.7,0-1.4,0.3-1.9,0.8l-3.5,3.5l4.1,4.1c0.4-0.2,0.8-0.3,1.3-0.3c1.7,0,3,1.3,3,3c0,0.5-0.1,0.9-0.3,1.3l4,4c0.4-0.2,0.8-0.3,1.3-0.3c1.7,0,3,1.3,3,3s-1.3,3-3,3c-1.7,0-3-1.3-3-3c0-0.5,0.1-0.9,0.3-1.3l-4-4c-0.1,0-0.2,0.1-0.3,0.1v10.4c1.2,0.4,2,1.5,2,2.8c0,1.7-1.3,3-3,3s-3-1.3-3-3c0-1.3,0.8-2.4,2-2.8V18.8c-1.2-0.4-2-1.5-2-2.8c0-0.5,0.1-0.9,0.3-1.3l-4.1-4.1L5.8,22.1C5.3,22.6,5,23.3,5,24c0,0.7,0.3,1.4,0.8,1.9l16.3,16.3c0,0,0,0,0,0c0.5,0.5,1.2,0.8,1.9,0.8s1.4-0.3,1.9-0.8l16.3-16.3c0.5-0.5,0.8-1.2,0.8-1.9C43,23.3,42.7,22.6,42.2,22.1z")
+                        a.open-link(href="https://dsk-news-app.herokuapp.com" target='_blank' aria-label="Open Coffee Time app")
                             svg(fill="#FD7E14" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" width="48px" height="48px")
                                 path(d="M 5 3 C 3.9069372 3 3 3.9069372 3 5 L 3 19 C 3 20.093063 3.9069372 21 5 21 L 19 21 C 20.093063 21 21 20.093063 21 19 L 21 12 L 19 12 L 19 19 L 5 19 L 5 5 L 12 5 L 12 3 L 5 3 z M 14 3 L 14 5 L 17.585938 5 L 8.2929688 14.292969 L 9.7070312 15.707031 L 19 6.4140625 L 19 10 L 21 10 L 21 3 L 14 3 z")
                 .card
@@ -67,16 +71,16 @@ block content
                             li.card-tech-item HTML5
                             li.card-tech-item CSS3
                     .card-links 
-                        a.git-link(href="https://github.com/BeastyDSK/node-weather-app" target="_blank")
-                            svg(xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 48 48" width="48px" height="48px")
-                                path(fill="#FD7E14" d="M42.2,22.1L25.9,5.8C25.4,5.3,24.7,5,24,5c0,0,0,0,0,0c-0.7,0-1.4,0.3-1.9,0.8l-3.5,3.5l4.1,4.1c0.4-0.2,0.8-0.3,1.3-0.3c1.7,0,3,1.3,3,3c0,0.5-0.1,0.9-0.3,1.3l4,4c0.4-0.2,0.8-0.3,1.3-0.3c1.7,0,3,1.3,3,3s-1.3,3-3,3c-1.7,0-3-1.3-3-3c0-0.5,0.1-0.9,0.3-1.3l-4-4c-0.1,0-0.2,0.1-0.3,0.1v10.4c1.2,0.4,2,1.5,2,2.8c0,1.7-1.3,3-3,3s-3-1.3-3-3c0-1.3,0.8-2.4,2-2.8V18.8c-1.2-0.4-2-1.5-2-2.8c0-0.5,0.1-0.9,0.3-1.3l-4.1-4.1L5.8,22.1C5.3,22.6,5,23.3,5,24c0,0.7,0.3,1.4,0.8,1.9l16.3,16.3c0,0,0,0,0,0c0.5,0.5,1.2,0.8,1.9,0.8s1.4-0.3,1.9-0.8l16.3-16.3c0.5-0.5,0.8-1.2,0.8-1.9C43,23.3,42.7,22.6,42.2,22.1z")
-                        a.open-link(href="https://dsk-weather-io.herokuapp.com" target='_blank')
+                        a.git-link(href="https://github.com/BeastyDSK/node-weather-app" target="_blank" aria-label="Node weather app Github link")
+                            svg(fill="#FD7E14" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 48 48" width="48px" height="48px")
+                                path(d="M42.2,22.1L25.9,5.8C25.4,5.3,24.7,5,24,5c0,0,0,0,0,0c-0.7,0-1.4,0.3-1.9,0.8l-3.5,3.5l4.1,4.1c0.4-0.2,0.8-0.3,1.3-0.3c1.7,0,3,1.3,3,3c0,0.5-0.1,0.9-0.3,1.3l4,4c0.4-0.2,0.8-0.3,1.3-0.3c1.7,0,3,1.3,3,3s-1.3,3-3,3c-1.7,0-3-1.3-3-3c0-0.5,0.1-0.9,0.3-1.3l-4-4c-0.1,0-0.2,0.1-0.3,0.1v10.4c1.2,0.4,2,1.5,2,2.8c0,1.7-1.3,3-3,3s-3-1.3-3-3c0-1.3,0.8-2.4,2-2.8V18.8c-1.2-0.4-2-1.5-2-2.8c0-0.5,0.1-0.9,0.3-1.3l-4.1-4.1L5.8,22.1C5.3,22.6,5,23.3,5,24c0,0.7,0.3,1.4,0.8,1.9l16.3,16.3c0,0,0,0,0,0c0.5,0.5,1.2,0.8,1.9,0.8s1.4-0.3,1.9-0.8l16.3-16.3c0.5-0.5,0.8-1.2,0.8-1.9C43,23.3,42.7,22.6,42.2,22.1z")
+                        a.open-link(href="https://dsk-weather-io.herokuapp.com" target='_blank' aria-label="Open WeatherIO app")
                             svg(fill="#FD7E14" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" width="48px" height="48px")
                                 path(d="M 5 3 C 3.9069372 3 3 3.9069372 3 5 L 3 19 C 3 20.093063 3.9069372 21 5 21 L 19 21 C 20.093063 21 21 20.093063 21 19 L 21 12 L 19 12 L 19 19 L 5 19 L 5 5 L 12 5 L 12 3 L 5 3 z M 14 3 L 14 5 L 17.585938 5 L 8.2929688 14.292969 L 9.7070312 15.707031 L 19 6.4140625 L 19 10 L 21 10 L 21 3 L 14 3 z")
                 .card
-                    p.card-title JarFinder GUI
+                    p.card-title ClassFinder GUI
                     .card-description
-                        p.card-text Jar Finder GUI is a simple utility to search class files inside a jar package. This desktop software is created by using JavaFX 1.8. It supports both normal and regex expression.
+                        p.card-text Java Class Finder GUI is a simple utility to search class files inside a jar package. This desktop software is created by using JavaFX 1.8. It supports both normal and RegEx expression.
                     .card-tech
                         ul.card-tech-items
                             li.card-tech-item Java
@@ -84,16 +88,16 @@ block content
                             li.card-tech-item FXML
                             li.card-tech-item CSS
                     .card-links 
-                        a.git-link(href="https://github.com/BeastyDSK/JarClassFinder" target="_blank")
-                            svg(xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 48 48" width="48px" height="48px")
-                                path(fill="#FD7E14" d="M42.2,22.1L25.9,5.8C25.4,5.3,24.7,5,24,5c0,0,0,0,0,0c-0.7,0-1.4,0.3-1.9,0.8l-3.5,3.5l4.1,4.1c0.4-0.2,0.8-0.3,1.3-0.3c1.7,0,3,1.3,3,3c0,0.5-0.1,0.9-0.3,1.3l4,4c0.4-0.2,0.8-0.3,1.3-0.3c1.7,0,3,1.3,3,3s-1.3,3-3,3c-1.7,0-3-1.3-3-3c0-0.5,0.1-0.9,0.3-1.3l-4-4c-0.1,0-0.2,0.1-0.3,0.1v10.4c1.2,0.4,2,1.5,2,2.8c0,1.7-1.3,3-3,3s-3-1.3-3-3c0-1.3,0.8-2.4,2-2.8V18.8c-1.2-0.4-2-1.5-2-2.8c0-0.5,0.1-0.9,0.3-1.3l-4.1-4.1L5.8,22.1C5.3,22.6,5,23.3,5,24c0,0.7,0.3,1.4,0.8,1.9l16.3,16.3c0,0,0,0,0,0c0.5,0.5,1.2,0.8,1.9,0.8s1.4-0.3,1.9-0.8l16.3-16.3c0.5-0.5,0.8-1.2,0.8-1.9C43,23.3,42.7,22.6,42.2,22.1z")
-                        a.open-link(href="https://github.com/BeastyDSK/JarClassFinder/blob/main/ClassFinderGUI.jar" target='_blank')
+                        a.git-link(href="https://github.com/BeastyDSK/JarClassFinder" target="_blank" aria-label="Class Finder Github link")
+                            svg(fill="#FD7E14" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 48 48" width="48px" height="48px")
+                                path( d="M42.2,22.1L25.9,5.8C25.4,5.3,24.7,5,24,5c0,0,0,0,0,0c-0.7,0-1.4,0.3-1.9,0.8l-3.5,3.5l4.1,4.1c0.4-0.2,0.8-0.3,1.3-0.3c1.7,0,3,1.3,3,3c0,0.5-0.1,0.9-0.3,1.3l4,4c0.4-0.2,0.8-0.3,1.3-0.3c1.7,0,3,1.3,3,3s-1.3,3-3,3c-1.7,0-3-1.3-3-3c0-0.5,0.1-0.9,0.3-1.3l-4-4c-0.1,0-0.2,0.1-0.3,0.1v10.4c1.2,0.4,2,1.5,2,2.8c0,1.7-1.3,3-3,3s-3-1.3-3-3c0-1.3,0.8-2.4,2-2.8V18.8c-1.2-0.4-2-1.5-2-2.8c0-0.5,0.1-0.9,0.3-1.3l-4.1-4.1L5.8,22.1C5.3,22.6,5,23.3,5,24c0,0.7,0.3,1.4,0.8,1.9l16.3,16.3c0,0,0,0,0,0c0.5,0.5,1.2,0.8,1.9,0.8s1.4-0.3,1.9-0.8l16.3-16.3c0.5-0.5,0.8-1.2,0.8-1.9C43,23.3,42.7,22.6,42.2,22.1z")
+                        a.open-link(href="https://github.com/BeastyDSK/JarClassFinder/blob/main/ClassFinderGUI.jar" target='_blank' aria-label="Open Class Finder app")
                             svg(fill="#FD7E14" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" width="48px" height="48px")
                                 path(d="M 5 3 C 3.9069372 3 3 3.9069372 3 5 L 3 19 C 3 20.093063 3.9069372 21 5 21 L 19 21 C 20.093063 21 21 20.093063 21 19 L 21 12 L 19 12 L 19 19 L 5 19 L 5 5 L 12 5 L 12 3 L 5 3 z M 14 3 L 14 5 L 17.585938 5 L 8.2929688 14.292969 L 9.7070312 15.707031 L 19 6.4140625 L 19 10 L 21 10 L 21 3 L 14 3 z")
                 .card
                     p.card-title NumberIO
                     .card-description
-                        p.card-text NumberIO is fun application. Using this application you can check whether a given number is an Armstrong, Prime , Perfect, Happy or Fibonnaci Number.
+                        p.card-text NumberIO is a fun application. Using this application you can check whether a given number is an Armstrong, Prime , Perfect, Happy or Fibonnaci Number.
                     .card-tech
                         ul.card-tech-items
                             li.card-tech-item Python
@@ -102,9 +106,15 @@ block content
                             li.card-tech-item HTML5
                             li.card-tech-item CSS3
                     .card-links 
-                        a.git-link(href="https://github.com/BeastyDSK/Python-Flask-NumberIO" target="_blank")
-                            svg(xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 48 48" width="48px" height="48px")
-                                path(fill="#FD7E14" d="M42.2,22.1L25.9,5.8C25.4,5.3,24.7,5,24,5c0,0,0,0,0,0c-0.7,0-1.4,0.3-1.9,0.8l-3.5,3.5l4.1,4.1c0.4-0.2,0.8-0.3,1.3-0.3c1.7,0,3,1.3,3,3c0,0.5-0.1,0.9-0.3,1.3l4,4c0.4-0.2,0.8-0.3,1.3-0.3c1.7,0,3,1.3,3,3s-1.3,3-3,3c-1.7,0-3-1.3-3-3c0-0.5,0.1-0.9,0.3-1.3l-4-4c-0.1,0-0.2,0.1-0.3,0.1v10.4c1.2,0.4,2,1.5,2,2.8c0,1.7-1.3,3-3,3s-3-1.3-3-3c0-1.3,0.8-2.4,2-2.8V18.8c-1.2-0.4-2-1.5-2-2.8c0-0.5,0.1-0.9,0.3-1.3l-4.1-4.1L5.8,22.1C5.3,22.6,5,23.3,5,24c0,0.7,0.3,1.4,0.8,1.9l16.3,16.3c0,0,0,0,0,0c0.5,0.5,1.2,0.8,1.9,0.8s1.4-0.3,1.9-0.8l16.3-16.3c0.5-0.5,0.8-1.2,0.8-1.9C43,23.3,42.7,22.6,42.2,22.1z")
-                        a.open-link(href="https://numberio.herokuapp.com/" target='_blank')
+                        a.git-link(href="https://github.com/BeastyDSK/Python-Flask-NumberIO" target="_blank" aria-label="Python NumberIO app Github link")
+                            svg( fill="#FD7E14" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 48 48" width="48px" height="48px")
+                                path( d="M42.2,22.1L25.9,5.8C25.4,5.3,24.7,5,24,5c0,0,0,0,0,0c-0.7,0-1.4,0.3-1.9,0.8l-3.5,3.5l4.1,4.1c0.4-0.2,0.8-0.3,1.3-0.3c1.7,0,3,1.3,3,3c0,0.5-0.1,0.9-0.3,1.3l4,4c0.4-0.2,0.8-0.3,1.3-0.3c1.7,0,3,1.3,3,3s-1.3,3-3,3c-1.7,0-3-1.3-3-3c0-0.5,0.1-0.9,0.3-1.3l-4-4c-0.1,0-0.2,0.1-0.3,0.1v10.4c1.2,0.4,2,1.5,2,2.8c0,1.7-1.3,3-3,3s-3-1.3-3-3c0-1.3,0.8-2.4,2-2.8V18.8c-1.2-0.4-2-1.5-2-2.8c0-0.5,0.1-0.9,0.3-1.3l-4.1-4.1L5.8,22.1C5.3,22.6,5,23.3,5,24c0,0.7,0.3,1.4,0.8,1.9l16.3,16.3c0,0,0,0,0,0c0.5,0.5,1.2,0.8,1.9,0.8s1.4-0.3,1.9-0.8l16.3-16.3c0.5-0.5,0.8-1.2,0.8-1.9C43,23.3,42.7,22.6,42.2,22.1z")
+                        a.open-link(href="https://numberio.herokuapp.com/" target='_blank' aria-label="Open NumberIO app")
                             svg(fill="#FD7E14" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" width="48px" height="48px")
                                 path(d="M 5 3 C 3.9069372 3 3 3.9069372 3 5 L 3 19 C 3 20.093063 3.9069372 21 5 21 L 19 21 C 20.093063 21 21 20.093063 21 19 L 21 12 L 19 12 L 19 19 L 5 19 L 5 5 L 12 5 L 12 3 L 5 3 z M 14 3 L 14 5 L 17.585938 5 L 8.2929688 14.292969 L 9.7070312 15.707031 L 19 6.4140625 L 19 10 L 21 10 L 21 3 L 14 3 z")
+        section.section-contact.u-margin-bottom-lg
+            h3.heading-tertiary.u-margin-bottom-md Get In Touch
+            p.text.centered.u-margin-bottom-md Currently I am working and also looking for exciting Opportunities. My inbox is always open. Just ping me, I will try my best to get back to you ASAP!
+            .contact
+                a(href="/resume.pdf" download="krishnaprasanth D V.pdf" aria-label="My Resume").cta-btn My Resume 
+                a(href="mailto:dhawansaran14346@gmail.com?subject=Hi" aria-label="Say Hello to me").cta-btn Say Hello
