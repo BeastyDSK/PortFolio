@@ -9,11 +9,11 @@ $color-secondary-back-2: #20df63;
 // mobile - 600px - 37.5em
 // tab - 860px - 53.75em
 // tab big screen - 1100px 68.75em
-// desktop - 1500px 81.25em
+// desktop - 1800px 112.5em
 $mobile: 37.5em;
 $tab: 56.25em;
 $ipad: 68.75em;
-$desktop: 93.75em;
+$desktop: 112.5em;
 
 @mixin mediaQuery($condition) {
     @if $condition == $desktop {
