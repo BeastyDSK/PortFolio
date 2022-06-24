@@ -1,5 +1,3 @@
-const https = require("https");
-const fs = require("fs");
 const path = require("path");
 const compression = require("compression");
 const helmet = require("helmet");
@@ -11,15 +9,6 @@ require("dotenv").config({
 const express = require("express");
 
 const app = express();
-
-const server = https.createServer(
-    {
-        key: fs.readFileSync(path.join(__dirname, "certs/key.pem")),
-        cert: fs.readFileSync(path.join(__dirname, "certs/cert.pem")),
-        secureContext: true,
-    },
-    app
-);
 
 app.enable("Trust proxy");
 app.use(helmet());
@@ -51,6 +40,6 @@ app.get("*", (req, res) => {
 });
 
 const port = process.env.PORT || 3000;
-server.listen(port, () => {
+app.listen(port, () => {
     console.log(`Server listening on http://localhost:${port}`);
 });
