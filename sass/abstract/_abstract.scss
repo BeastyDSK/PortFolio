@@ -45,8 +45,12 @@ $desktop: 112.5em;
     top: 0;
     left: 0;
     z-index: 7;
-    backdrop-filter: blur(15px);
-    -webkit-backdrop-filter: blur(15px);
+    @supports not (backdrop-filter: blur(0px)) {
+        background: rgba($color-primary-back, 0.8);
+    }
+    @supports (backdrop-filter: blur(0px)) {
+        backdrop-filter: blur(15px);
+    }
 
     @include mediaQuery($tab) {
         position: relative;

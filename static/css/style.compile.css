@@ -20,8 +20,16 @@
   top: 0;
   left: 0;
   z-index: 7;
-  backdrop-filter: blur(15px);
-  -webkit-backdrop-filter: blur(15px);
+}
+@supports not (backdrop-filter: blur(0px)) {
+  .sticky-nav {
+    background: rgba(1, 18, 19, 0.8);
+  }
+}
+@supports (backdrop-filter: blur(0px)) {
+  .sticky-nav {
+    backdrop-filter: blur(15px);
+  }
 }
 @media only screen and (max-width: 56.25em) {
   .sticky-nav {
@@ -303,16 +311,34 @@ a[class$=-link]:hover svg {
     top: 0;
     right: 0;
     transform: translateX(100rem);
-    backdrop-filter: blur(0);
     transition: all 0.5s;
+  }
+  @supports not (backdrop-filter: blur(0px)) {
+    .header .navigation {
+      background: rgba(0, 0, 0, 0.1);
+    }
+  }
+  @supports (backdrop-filter: blur(0px)) {
+    .header .navigation {
+      backdrop-filter: blur(0px);
+    }
   }
 }
 .header .navigation-active {
   height: 100vh;
   width: 100vw;
-  backdrop-filter: blur(8px);
   z-index: 4;
   transform: translateX(0rem);
+}
+@supports not (backdrop-filter: blur(0px)) {
+  .header .navigation-active {
+    background: rgba(0, 0, 0, 0.6);
+  }
+}
+@supports (backdrop-filter: blur(0px)) {
+  .header .navigation-active {
+    backdrop-filter: blur(8px);
+  }
 }
 .header .navigation_items {
   display: flex;
