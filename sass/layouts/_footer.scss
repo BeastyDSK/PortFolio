@@ -14,3 +14,18 @@
         }
     }
 }
+
+.profile {
+    padding: 1rem;
+}
+
+.profile-link-items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.profile-link img {
+    width: 32px;
+}

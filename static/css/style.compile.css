@@ -482,6 +482,21 @@ a[class$=-link]:hover svg {
   background-image: linear-gradient(to right, #2dd6b2, #20df63);
 }
 
+.profile {
+  padding: 1rem;
+}
+
+.profile-link-items {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.profile-link img {
+  width: 32px;
+}
+
 .container {
   max-width: 110rem;
   margin: 0 auto;
