@@ -1,0 +1,34 @@
+{
+    "name": "portfolio",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "css:watch": "sass -w sass/main.scss:static/css/style.min.css",
+        "css:compile": "sass sass/main.scss:static/css/style.compile.css",
+        "css:prefix": "postcss --use autoprefixer -b 'last 50 versions' static/css/style.compile.css -o static/css/style.prefix.css",
+        "css:compress": "sass static/css/style.prefix.css:static/css/style.min.css --style=compressed",
+        "start:dev": "nodemon app.js -e *",
+        "start": "node app.js",
+        "minify:js": "terser static/js/main.js --compress --output static/js/main.min.js",
+        "run-all": "npm-run-all css:compile css:prefix css:compress minify:js"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "compression": "^1.7.4",
+        "dotenv": "^16.0.1",
+        "express": "^4.18.1",
+        "helmet": "^5.1.0",
+        "pug": "^3.0.2"
+    },
+    "devDependencies": {
+        "autoprefixer": "^10.4.7",
+        "nodemon": "^2.0.16",
+        "npm-run-all": "^4.1.5",
+        "postcss": "^8.4.14",
+        "postcss-cli": "^9.1.0",
+        "sass": "^1.52.3"
+    }
+}

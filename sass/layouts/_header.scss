@@ -1,0 +1,187 @@
+.header {
+    width: 100%;
+    padding: 2.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.4s linear;
+
+    &_logo-text {
+        font-size: 3.2rem;
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+        background-image: linear-gradient(to right, $color-primary-text 50%, $color-secondary-text 50%);
+    }
+
+    & .navigation {
+        @include mediaQuery($tab) {
+            position: fixed;
+            top: 0;
+            right: 0;
+            transform: translateX(100rem);
+            @supports not (backdrop-filter: blur(0px)) {
+                background: rgba(0, 0, 0, 0.1);
+            }
+            @supports (backdrop-filter: blur(0px)) {
+                backdrop-filter: blur(0px);
+            }
+            transition: all 0.5s;
+        }
+        &-active {
+            height: 100vh;
+            width: 100vw;
+            @supports not (backdrop-filter: blur(0px)) {
+                background: rgba(0, 0, 0, 0.6);
+            }
+            @supports (backdrop-filter: blur(0px)) {
+                backdrop-filter: blur(8px);
+            }
+            z-index: 4;
+            transform: translateX(0rem);
+        }
+
+        &_items {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            @include mediaQuery($tab) {
+                flex-direction: column;
+                position: absolute;
+                top: 0;
+                right: 0;
+                height: 100vh;
+                width: 75vw;
+                text-transform: uppercase;
+                background: $color-primary-back-light;
+            }
+        }
+
+        &_item {
+            margin-right: 1.6rem;
+            @include mediaQuery($tab) {
+                margin-bottom: 5rem;
+                margin-right: 0;
+            }
+        }
+
+        &_link:not([href^="mailto"]) {
+            position: relative;
+
+            &:hover {
+                color: darken($color: $color-primary-text, $amount: 10);
+            }
+
+            &::after {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                content: "";
+                height: 2px;
+                width: 0;
+                background: $color-primary-text;
+                transition: width 0.3s ease-in-out;
+            }
+
+            &:hover::after {
+                width: 100%;
+            }
+        }
+    }
+}
+
+.menu {
+    display: none;
+    width: 50px;
+    height: 50px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    position: fixed;
+    top: 12px;
+    right: 25px;
+    z-index: 5;
+    padding: 3rem;
+    border-radius: 300px;
+    background: $color-primary-back-light;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.26);
+
+    @include mediaQuery($tab) {
+        display: inline-block;
+    }
+
+    &-box {
+        width: 40px;
+        height: 40px;
+        appearance: none;
+    }
+
+    &-icon {
+        cursor: pointer;
+    }
+
+    &-icon,
+    &-box {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    &-box:checked + &-icon {
+        & span {
+            height: 0;
+        }
+
+        & span::after {
+            top: 0;
+            transform: rotate(225deg);
+        }
+        & span::before {
+            top: 0;
+            transform: rotate(315deg);
+        }
+    }
+
+    &:hover {
+        & span::before {
+            top: -12px;
+        }
+
+        & span::after {
+            top: 12px;
+        }
+    }
+
+    & span,
+    & span::before,
+    & span::after {
+        height: 2px;
+        width: 35px;
+        background: currentColor;
+        font-size: 0;
+        background-color: $color-primary-text;
+        border-radius: 1px;
+        transition: all 0.3s;
+    }
+
+    & span {
+        display: inline-block;
+        width: 35px;
+        position: relative;
+        top: -5px;
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: -10px;
+            left: 0;
+        }
+        &::after {
+            content: "";
+            position: absolute;
+            top: 10px;
+            left: 0;
+        }
+    }
+}

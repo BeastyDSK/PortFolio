@@ -1,0 +1,69 @@
+$color-primary-back-dark: #280931;
+$color-primary-back-light: #092530;
+$color-primary-back: #011213;
+$color-primary-text: #2dd6b2;
+$color-secondary-text: #f94c66;
+$color-secondary-back-2: #20df63;
+
+// Media Query
+// mobile - 600px - 37.5em
+// tab - 860px - 53.75em
+// tab big screen - 1100px 68.75em
+// desktop - 1800px 112.5em
+$mobile: 37.5em;
+$tab: 56.25em;
+$ipad: 68.75em;
+$desktop: 112.5em;
+
+@mixin mediaQuery($condition) {
+    @if $condition == $desktop {
+        @media only screen and (min-width: $condition) {
+            @content;
+        }
+    } @else {
+        @media only screen and (max-width: $condition) {
+            @content;
+        }
+    }
+}
+
+.u-margin-bottom-sm {
+    margin-bottom: 2rem;
+}
+.u-margin-bottom-md {
+    margin-bottom: 4rem;
+}
+.u-margin-bottom-lg {
+    margin-bottom: 6rem;
+}
+.u-margin-bottom-hg {
+    margin-bottom: 8rem;
+}
+
+.sticky-nav {
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 7;
+    @supports not (backdrop-filter: blur(0px)) {
+        background: rgba($color-primary-back, 0.8);
+    }
+    @supports (backdrop-filter: blur(0px)) {
+        backdrop-filter: blur(15px);
+    }
+
+    @include mediaQuery($tab) {
+        position: relative;
+        top: 0;
+        left: 0;
+        z-index: 0;
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
+    }
+}
+
+.centered {
+    padding: 1.5rem 3rem 0 3rem;
+    text-align: center;
+    font-size: 1.8rem;
+}

@@ -1,0 +1,37 @@
+.cta-btn {
+    display: inline-block;
+    transition: color, border, box-shadow 0.5s;
+    padding: 0.6rem 1.5rem;
+    border: 2px solid $color-secondary-text;
+    border-radius: 5px;
+    box-shadow: inset 0 0 5px $color-secondary-text;
+
+    &:hover {
+        color: $color-secondary-text;
+        border: 2px solid $color-primary-text;
+        box-shadow: inset 0 0 8px $color-primary-text;
+    }
+
+    &:active {
+        box-shadow: inset 0 0 15px $color-primary-text;
+        transform: scale(0.95);
+    }
+}
+.special-btn {
+    border: 2px solid $color-primary-text;
+    border-radius: 5px;
+    transition: all 0.3s;
+    padding: 1rem 3rem;
+    text-transform: uppercase;
+    animation: fall 1s ease-in-out;
+
+    &:hover {
+        transform: translateY(-0.5rem);
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    }
+
+    &:active {
+        transform: translateY(0.5rem);
+        box-shadow: 0 0 1px rgba(0, 0, 0, 0.3);
+    }
+}

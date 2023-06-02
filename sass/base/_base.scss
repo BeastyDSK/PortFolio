@@ -1,0 +1,63 @@
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+    font-family: inherit;
+}
+
+a:link,
+a:visited,
+button {
+    cursor: pointer;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    // 1rem = 16px = 100%
+    // So 10px = 1000/16 = 62.5%
+    @include mediaQuery($desktop) {
+        font-size: 80%;
+    }
+    @include mediaQuery($tab) {
+        font-size: 55%;
+    }
+    @include mediaQuery($mobile) {
+        font-size: 50%;
+    }
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+    background-color: $color-primary-back;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.221);
+    border: 2px solid $color-primary-back;
+}
+
+body {
+    box-sizing: border-box;
+    font-family: "Nunito", "sans-serif";
+    font-weight: 400;
+    background-color: $color-primary-back;
+    color: $color-primary-text;
+    font-size: 1.6rem;
+    letter-spacing: 0.5px;
+    position: relative;
+    z-index: -1;
+}
+
+ul li {
+    list-style: none;
+}
+
+a:link,
+a:visited {
+    text-decoration: none;
+    color: inherit;
+}
