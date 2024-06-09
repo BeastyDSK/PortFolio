@@ -1,6 +1,8 @@
 # Portfolio
 
 Hi. This is my portfolio. Built with NodeJS and server side rendering with `PUG` template.
+[Demo link](https://github.com/BeastyDSK/PortFolio/assets/53361004/25956988-c65e-4bb2-9bc6-ba81a4d83a91)
+
 
 ## Demo
 
@@ -56,3 +58,6 @@ For development please complete the steps from 1 to 6 in the demo section.
 | start        | To start the server                                                                        | production |
 | minify:js    | To minify client JS file by removing unwanted line breaks and spaces                       | production |
 | run-all      | To generate the production CSS and JS build (involves all the production related commands) | production |
+
+# 😀
+
